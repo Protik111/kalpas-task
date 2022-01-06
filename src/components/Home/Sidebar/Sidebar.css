@@ -3,7 +3,7 @@
     height: 100vh;
     width: 28vw;
     /* border: 1px solid gray; */
-    box-shadow: 1px 5px 15px gray;
+    box-shadow: 1px 1px 10px gray;
     /* padding-left: 10px; */
     border-top-left-radius: 2rem;
     z-index: 100;
@@ -11,7 +11,7 @@
 }
 .profile-container{
     background-color: #FFFFFF;
-    box-shadow: 1px 5px 15px gray;
+    box-shadow: 1px 1px 10px gray;
     border-radius: 10px;
 
 }
@@ -23,7 +23,7 @@
 .toggle-container{
     text-align: center;
     background-color: #FFFFFF;
-    box-shadow: 1px 5px 15px gray;
+    box-shadow: 1px 1px 10px gray;
     border-radius: 10px;
 }
 .icon{
@@ -33,7 +33,7 @@
 }
 .feedback-container{
     background-color: #FFFFFF;
-    box-shadow: 1px 5px 15px gray;
+    box-shadow: 1px 1px 10px gray;
     border-radius: 10px;
 }
 .feedback-listening{

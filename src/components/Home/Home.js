@@ -9,7 +9,7 @@ const Home = () => {
             <div className="col-md-2 sidebar">
                 <Sidebar></Sidebar>
             </div>
-            <div className="col-md-10 p-0">
+            <div className="col-md-10">
                 <News></News>
             </div>
         </div>

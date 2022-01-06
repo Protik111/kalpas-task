@@ -1,0 +1,11 @@
+.newsStyle-container{
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 10px gray;
+    border-radius: 10px;
+    /* width: 80%; */
+}
+.posts-profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
