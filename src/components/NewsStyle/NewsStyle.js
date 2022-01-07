@@ -4,9 +4,10 @@ import { ImCross } from 'react-icons/im'
 
 const NewsStyle = (props) => {
     const [image, setImage] = useState('');
-    const { userId, id, title, body } = props.post;
-    const sliced = body.slice(0, 70);
-    console.log(sliced);
+    const { title, body } = props.post;
+    const slicedBody = body.slice(0, 70);
+    const slicedTitle = title.slice(0, 50);
+    // console.log(sliced);
 
     useEffect(() => {
         fetch(`https://randomuser.me/api/`)
@@ -16,20 +17,16 @@ const NewsStyle = (props) => {
 
     // console.log(image)
     return (
-        <div>
-            <div className='newsStyle-container offset-md-3 d-flex pt-4 mt-2 w-75'>
-                <div className='posts-profile m-3'>
-                    <img src={image} alt="" />
-                </div>
-                <div>
-                    <h5>{title}</h5>
-                    <h6>{sliced}...</h6>
-                    <p>Mon, 21 Dec 2020 14:57 GMT</p>
-                </div>
+        <div className='newsStyle-container offset-md-2 d-flex pt-4 mt-2 w-75'>
+            <div className='posts-profile m-3'>
+                <img src={image} alt="" />
             </div>
-            <div classname='cross-btn'>
-                <ImCross style={{ color: 'red', fontSize: '25px' }}></ImCross>
+            <div>
+                <h5>{slicedTitle}</h5>
+                <h6>{slicedBody}...</h6>
+                <p>Mon, 21 Dec 2020 14:57 GMT</p>
             </div>
+            <ImCross className='cross-icon' style={{ color: 'red', fontSize: '25px' }}></ImCross>
         </div>
     );
 };
