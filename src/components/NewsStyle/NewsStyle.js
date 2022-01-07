@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './NewsStyle.css';
 import { ImCross } from 'react-icons/im'
 
-const NewsStyle = (props) => {
+const NewsStyle = ({ post, handleDelete }) => {
     const [image, setImage] = useState('');
-    const { title, body } = props.post;
+    const { id, title, body } = post;
     const slicedBody = body.slice(0, 70);
     const slicedTitle = title.slice(0, 50);
     // console.log(sliced);
@@ -26,7 +26,11 @@ const NewsStyle = (props) => {
                 <h6>{slicedBody}...</h6>
                 <p>Mon, 21 Dec 2020 14:57 GMT</p>
             </div>
-            <ImCross className='cross-icon' style={{ color: 'red', fontSize: '25px' }}></ImCross>
+            <a href="" onClick={(e) => {
+                e.preventDefault();
+                handleDelete(id)
+            }}><ImCross className='cross-icon' style={{ color: 'red', fontSize: '25px' }}></ImCross>
+            </a>
         </div>
     );
 };

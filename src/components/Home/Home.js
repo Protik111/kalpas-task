@@ -2,15 +2,25 @@ import React from 'react';
 import News from './News/News';
 import Sidebar from './Sidebar/Sidebar';
 import './Home.css';
+import { useState } from 'react/cjs/react.development';
 
 const Home = () => {
+    const [tableView, setTableView] = useState('column')
+    const handleTableView = (e) => {
+        if(e === 'table'){
+            setTableView('table');
+        };
+        if(e === 'column'){
+            setTableView('column');
+        }
+    }
     return (
         <div className="row home">
             <div className="col-md-2 sidebar">
-                <Sidebar></Sidebar>
+                <Sidebar handleTableView={handleTableView}></Sidebar>
             </div>
             <div className="col-md-10">
-                <News></News>
+                <News tableView={tableView}></News>
             </div>
         </div>
     );
