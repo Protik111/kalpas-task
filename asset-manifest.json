@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kalpas-task/static/css/main.7af70b43.css",
+    "main.js": "/kalpas-task/static/js/main.96c8f7a7.js",
+    "index.html": "/kalpas-task/index.html",
+    "main.7af70b43.css.map": "/kalpas-task/static/css/main.7af70b43.css.map",
+    "main.96c8f7a7.js.map": "/kalpas-task/static/js/main.96c8f7a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7af70b43.css",
+    "static/js/main.96c8f7a7.js"
+  ]
+}
