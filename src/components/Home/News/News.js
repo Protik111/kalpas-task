@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Feedback from '../../Feedback/Feedback';
 import NewsStyle from '../../NewsStyle/NewsStyle';
 import NewsStyleTable from '../../NewsStyleTable/NewsStyleTable';
 import Pagination from '../../Pagination/Pagination';
@@ -49,9 +50,12 @@ const News = ({ tableView }) => {
             { tableView === 'table' && <div className='row offset-md-2'>
             {slicedPosts.map(post => <NewsStyleTable post={post} key={post.id} handleDelete={handleDelete}></NewsStyleTable>)}
             </div>}
-            <div className='d-flex justify-content-center mt-3'>
+            {tableView === 'feedback' && <div className='row offset-md-3'>
+                <Feedback></Feedback>
+                </div>}
+            {tableView !== 'feedback' && <div className='d-flex justify-content-center mt-3'>
                 <Pagination postPerPage={postPerPage} totalPost={15} handlePaginate={handlePaginate}></Pagination>
-            </div>
+            </div>}
         </div>
     );
 };

@@ -1,0 +1,24 @@
+.feedback{
+    height: 100%;
+}
+.feedback-input{
+    border-radius: 7px;
+}
+/* .address-input{
+    height: 200px;
+} */
+input[type="address"]::placeholder{
+    position: absolute;
+    top: 10px;
+    font-size: 15px;
+    color: gray;
+    /* text-align: left; */
+}
+.country-input{
+    width: 500px;
+}
+.submit-feedback,
+.submit-feedback:hover{
+    background-color: #5CC8A1;
+    color: white;
+}

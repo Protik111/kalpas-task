@@ -43,9 +43,13 @@
     justify-content: center;
     align-items: center;
 }
+.feedback-active{
+    background-color: #EAA4A7;
+}
 .active{
     background-color: #99F0CA;
 }
 a{
+    text-decoration: none;
     color: black;
 }

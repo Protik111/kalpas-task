@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './NewsStyle.css';
 import { ImCross } from 'react-icons/im'
+import { NavLink } from 'react-router-dom';
 
 const NewsStyle = ({ post, handleDelete }) => {
     const [image, setImage] = useState('');
@@ -17,21 +18,23 @@ const NewsStyle = ({ post, handleDelete }) => {
 
     // console.log(image)
     return (
-        <div className='newsStyle-container offset-md-2 d-flex pt-4 mt-2 w-75'>
-            <div className='posts-profile m-3'>
-                <img src={image} alt="" />
+        <NavLink to={`/post/${id}`} className='nav-link'>
+            <div className='newsStyle-container offset-md-2 d-flex pt-4 mt-2 w-75'>
+                <div className='posts-profile m-3'>
+                    <img src={image} alt="" />
+                </div>
+                <div>
+                    <h5>{slicedTitle}</h5>
+                    <h6>{slicedBody}...</h6>
+                    <p>Mon, 21 Dec 2020 14:57 GMT</p>
+                </div>
+                <a href="" onClick={(e) => {
+                    e.preventDefault();
+                    handleDelete(id)
+                }}><ImCross className='cross-icon' style={{ color: 'red', fontSize: '25px' }}></ImCross>
+                </a>
             </div>
-            <div>
-                <h5>{slicedTitle}</h5>
-                <h6>{slicedBody}...</h6>
-                <p>Mon, 21 Dec 2020 14:57 GMT</p>
-            </div>
-            <a href="" onClick={(e) => {
-                e.preventDefault();
-                handleDelete(id)
-            }}><ImCross className='cross-icon' style={{ color: 'red', fontSize: '25px' }}></ImCross>
-            </a>
-        </div>
+        </NavLink>
     );
 };
 

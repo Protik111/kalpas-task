@@ -3,9 +3,10 @@ import './Sidebar.css'
 import profile from '../../../images/profile.jpg'
 import { HiViewList } from 'react-icons/hi';
 import { ImTable } from 'react-icons/im';
+import { NavLink } from 'react-router-dom';
 
 
-const Sidebar = ({handleTableView}) => {
+const Sidebar = ({handleTableView, tableView}) => {
     const [active, setActive] = useState('');
     const [firstActive, setFirstActive] = useState(true);
     const handleToggle = (e) => {
@@ -30,7 +31,7 @@ const Sidebar = ({handleTableView}) => {
                 </div>
             </div>
 
-            <div className='toggle-container mx-5 mt-5 py-1'>
+            { tableView !== 'feedback' && <div className='toggle-container mx-5 mt-5 py-1'>
                 <div className='view-toggle mt-2'>
                     <h2>View Toggle</h2>
                 </div>
@@ -50,14 +51,17 @@ const Sidebar = ({handleTableView}) => {
                         }} href=""><HiViewList></HiViewList></a>
                     </div>
                 </div>
-            </div>
+            </div>}
 
             <div className='feedback-container mx-5 mt-5 py-1 text-center'>
                 <div className='feedback-tag mt-2'>
                     <h3><bold>Have A Feedback?</bold></h3>
                 </div>
-                <div className='feedback-listening'>
-                    <h4>We are listening</h4>
+                <div className={`feedback-listening ${tableView === 'feedback' ? 'feedback-active' : ''}`}>
+                    <a onClick={(e) => {
+                        e.preventDefault();
+                        handleTableView('feedback')
+                    }} href=""><h4>We are listening</h4></a>
                 </div>
             </div>
         </div>

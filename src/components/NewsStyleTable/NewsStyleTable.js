@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react/cjs/react.development';
 import './NewsStyleTable.css';
 import { ImCross } from 'react-icons/im'
+import { Link, NavLink } from 'react-router-dom';
 
 const NewsStyleTable = ({post, handleDelete}) => {
     const [image, setImage] = useState('');
@@ -15,7 +16,7 @@ const NewsStyleTable = ({post, handleDelete}) => {
             .then(result => setImage(result.results[0].picture.large));
     }, []);
     return (
-        <div className="table-view card col-md-3 m-2 px-3 py-4">
+        <NavLink to={`/post/${id}`} className="nav-link table-view card col-md-3 m-2 px-3 py-4">
             <div className="card-body">
                 <h5 className="card-title">{slicedTitle}...</h5>
                 <p className="card-text">{slicedBody}...</p>
@@ -29,7 +30,7 @@ const NewsStyleTable = ({post, handleDelete}) => {
             }}><ImCross className='cross-icon2' style={{ color: 'red', fontSize: '25px' }}></ImCross>
             </a>
             </div>
-        </div>
+        </NavLink>
     );
 };
 

@@ -13,11 +13,14 @@ const Home = () => {
         if(e === 'column'){
             setTableView('column');
         }
+        if(e === 'feedback'){
+            setTableView('feedback')
+        }
     }
     return (
         <div className="row home">
             <div className="col-md-2 sidebar">
-                <Sidebar handleTableView={handleTableView}></Sidebar>
+                <Sidebar handleTableView={handleTableView} tableView={tableView}></Sidebar>
             </div>
             <div className="col-md-10">
                 <News tableView={tableView}></News>
