@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react/cjs/react.development';
-import './NewsStyleTable.css';
+import './Newsstyletable.css';
 import { ImCross } from 'react-icons/im'
 import { Link, NavLink } from 'react-router-dom';
 
-const NewsStyleTable = ({post, handleDelete}) => {
+const Newsstyletable = ({post, handleDelete}) => {
     const [image, setImage] = useState('');
     const { id, title, body } = post;
     const slicedBody = body.slice(0, 50);
@@ -34,4 +34,4 @@ const NewsStyleTable = ({post, handleDelete}) => {
     );
 };
 
-export default NewsStyleTable;
+export default Newsstyletable;

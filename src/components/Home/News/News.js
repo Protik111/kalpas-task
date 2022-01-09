@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Feedback from '../../Feedback/Feedback';
-import NewsStyle from '../../NewsStyle/NewsStyle';
-import NewsStyleTable from '../../NewsStyleTable/NewsStyleTable';
+import Newsstyle from '../../Newsstyle/Newsstyle';
+import Newsstyletable from '../../Newsstyletable/Newsstyletable';
 import Pagination from '../../Pagination/Pagination';
 import './News.css';
 
@@ -45,10 +45,10 @@ const News = ({ tableView }) => {
     return (
         <div className='news-container pt-4'>
             { tableView === 'column' && <div>
-                {slicedPosts.map(post => <NewsStyle post={post} key={post.id} handleDelete={handleDelete}></NewsStyle>)}
+                {slicedPosts.map(post => <Newsstyle post={post} key={post.id} handleDelete={handleDelete}></Newsstyle>)}
             </div>}
             { tableView === 'table' && <div className='row offset-md-2'>
-            {slicedPosts.map(post => <NewsStyleTable post={post} key={post.id} handleDelete={handleDelete}></NewsStyleTable>)}
+            {slicedPosts.map(post => <Newsstyletable post={post} key={post.id} handleDelete={handleDelete}></Newsstyletable>)}
             </div>}
             {tableView === 'feedback' && <div className='row offset-md-3'>
                 <Feedback></Feedback>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './NewsStyle.css';
+import './Newsstyle.css';
 import { ImCross } from 'react-icons/im'
 import { NavLink } from 'react-router-dom';
 
-const NewsStyle = ({ post, handleDelete }) => {
+const Newsstyle = ({ post, handleDelete }) => {
     const [image, setImage] = useState('');
     const { id, title, body } = post;
     const slicedBody = body.slice(0, 70);
@@ -38,4 +38,4 @@ const NewsStyle = ({ post, handleDelete }) => {
     );
 };
 
-export default NewsStyle;
+export default Newsstyle;
