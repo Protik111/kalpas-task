@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react/cjs/react.development';
+import React, { useEffect, useState } from 'react';
 import './Newsstyletable.css';
 import { ImCross } from 'react-icons/im'
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Newsstyletable = ({post, handleDelete}) => {
     const [image, setImage] = useState('');

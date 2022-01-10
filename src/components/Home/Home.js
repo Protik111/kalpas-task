@@ -2,7 +2,7 @@ import React from 'react';
 import News from './News/News';
 import Sidebar from './Sidebar/Sidebar';
 import './Home.css';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 
 const Home = () => {
     const [tableView, setTableView] = useState('column')

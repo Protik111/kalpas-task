@@ -3,8 +3,6 @@ import './Sidebar.css'
 import profile from '../../../images/profile.jpg'
 import { HiViewList } from 'react-icons/hi';
 import { ImTable } from 'react-icons/im';
-import { NavLink } from 'react-router-dom';
-
 
 const Sidebar = ({handleTableView, tableView}) => {
     const [active, setActive] = useState('');

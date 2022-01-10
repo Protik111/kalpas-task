@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Feedback.css';
-import { IoMdSearch } from 'react-icons/io';
 import isEmail from 'validator/lib/isEmail';
 
 const Feedback = () => {
